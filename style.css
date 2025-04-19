@@ -515,12 +515,12 @@ p {
   }
 
   #page1 {
-      padding-top: 60px; /* Add padding matching navbar height */
+      padding-top:200px; /* Add padding matching navbar height */
   }
 
   #page1 h1 {
       padding-left: 20px;
-      font-size: 30vw; /* Adjust size */
+      font-size: 35vw; /* Adjust size */
   }
 
   #page2 {

@@ -144,7 +144,7 @@ tl4
 })
 .to("#page4 #video-container2 video",{
     delay:1,
-    duration:2,
+    duration:4,
     transform: "scale(1)"
 
 })
