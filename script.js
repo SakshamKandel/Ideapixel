@@ -1,4 +1,3 @@
-/* ===( Build By : CODE AASHU )=== */
 function pageOne() {
     var tl = gsap.timeline({
         scrollTrigger: {
@@ -42,7 +41,6 @@ function pageTwo() {
         scrollTrigger: {
             trigger: "#page2",
             scroller: "body",
-            // markers:true,
             start: "top -5%",
             end: "top -100%",
             scrub: 2,
@@ -60,7 +58,6 @@ function pageTwo() {
             opacity: 0,
         })
 
-        
 }
 pageTwo()
 function pg3() {
@@ -70,7 +67,6 @@ function pg3() {
             pin: true,
             scroller: "body",
             scrub: 4,
-            // markers:true
         }
     })
     tl3
@@ -127,8 +123,6 @@ gsap.to("#main",{
         scroller: "body",
         scrub: 1,
         start:"bottom 50%",
-        // end:"top -10%",
-        // markers:true
     }
 })
 
@@ -138,7 +132,6 @@ var tl4 = gsap.timeline({
         scroller: "body",
         scrub: 2,
         start:"top -50%",
-        // markers:true,
         pin:true
     }
 });
@@ -156,35 +149,4 @@ tl4
 
 })
 
-
-var tl5 = gsap.timeline({
-    scrollTrigger: {
-        trigger: "#page5",
-        scroller: "body",
-        scrub: 1,
-        start:"top -90%",
-        end:"top -100%",
-        // markers:true
-    }
-});
-tl5.to("#page5",{
-    backgroundColor: "black",
-},"h")
-
-.to("#page5 .more h1,#page5 .more i",{
-   color: "white",
-},"h")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* Removed tl5 as #page5 is removed */

@@ -1,696 +1,705 @@
-/* ===( Build By : CODE AASHU )=== */
-
-/* Fonts Declaration */
 @font-face {
-    font-family: 'Headingnow';
-    src: url(./Heading-Now-Variable.ttf);
+  font-family: Inter; /* Corrected font family name to match usage */
+  src: url(./Inter.ttf); /* Ensure this file exists */
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
-
-/* General Reset and Global Styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter, sans-serif; /* Use HeadingNow consistently */
 }
 
-html {
-    scroll-behavior: smooth;
-    touch-action: manipulation;
-}
-
+html,
 body {
-    width: 100%;
-    height: 100%;
-    overflow-x: hidden;
-}
-
-img, video {
-    max-width: 100%;
-    height: auto;
-    display: block;
+  width: 100%;
+  height: 100%;
 }
 
 *::selection {
-    background-color: black;
-    color: #fff;
+  background-color: black;
+  color: #fff;
 }
 
-/* Navbar Styling */
+/* Increase base paragraph spacing */
+p {
+  line-height: 1.7; /* Increased default line height */
+  letter-spacing: 1px; /* Increased default letter spacing */
+}
+
+
+#main {
+  width: 100%;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+#page1 {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-color: black;
+  overflow: hidden;
+}
+
 #navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100px;
-    width: 100%;
-    padding: 0 50px;
-    padding-top: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: #fff;
-    z-index: 99;
-    mix-blend-mode: difference;
+  position: fixed;
+  height: 100px;
+  width: 100%;
+  padding: 0 50px;
+  padding-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  z-index: 999; /* Increased z-index */
+  mix-blend-mode: difference;
+  transition: background-color 0.3s ease;
 }
 
 #navbar h2 {
-    text-transform: uppercase;
-    font-size: 55px;
-    display: flex;
-    align-items: flex-start;
-    font-stretch: 700%;
-    font-weight: 300;
-    line-height: .8;
-    animation-name: stretch;
-    animation-duration: .9s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+  text-transform: uppercase;
+  font-size: 55px;
+  display: flex;
+  align-items: flex-start;
+  font-stretch: 700%;
+  font-weight: 300;
+  line-height: .8;
+  animation-name: stretch;
+  animation-duration: .9s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  color: inherit;
 }
 
 @keyframes stretch {
-    0% { font-stretch: 700%; font-weight: 300; }
-    100% { font-stretch: 800%; font-weight: 100; }
+  0% {
+      font-stretch: 700%;
+      font-weight: 300;
+  }
+  100% {
+      font-stretch: 800%;
+      font-weight: 100;
+  }
 }
 
 #navbar h2 sup {
-    font-size: 8px;
+  font-size: 8px;
 }
 
 #nav-pt2 {
-    display: flex;
-    gap: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 50px; /* Adjusted gap slightly */
 }
 
 #nav-pt2 a {
-    color: #fff;
-    text-transform: uppercase;
-    font-size: 28px;
-    font-weight: 300;
-    font-stretch: 400%;
-    text-decoration: none;
-}
-
-/* Page 1 Styling */
-#page1 {
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    background-color: black;
-    overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  text-transform: uppercase;
+  font-size: 20px; /* Adjusted font size */
+  font-weight: 300;
+  font-stretch: 400%;
+  letter-spacing: 1px; /* Added spacing */
 }
 
 #page1 h1 {
-    font-size: 50vw;
-    white-space: nowrap;
-    line-height: 1;
-    text-transform: uppercase;
-    color: #fff;
-    font-stretch: 260%;
-    font-weight: 900;
-    padding-left: 50px;
+  font-size: 50vw;
+  white-space: nowrap;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #fff;
+  font-stretch: 260%;
+  font-weight: 900;
+  padding-left: 50px;
 }
 
-#video-container {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+#page1 #video-container {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #video-container video {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    transform: scale(.6);
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transform: scale(.6);
 }
 
-/* Page 2 Styling */
 #page2 {
-    height: 110vh;
-    width: 100%;
-    background-color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  height: 110vh;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #page2 #center {
-    width: 100%;
-    height: 70%;
-    display: flex;
-    align-items: center;
+  width: 100%;
+  height: 70%;
+  display: flex;
+  align-items: center;
 }
 
-#center #left, #center #right {
-    height: 100%;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0 170px;
+#center #left {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 170px;
 }
 
-#center h2 {
-    font-size: 6vw;
-    line-height: .8;
+#center #left h2 {
+  font-size: 6vw;
+  line-height: .8;
+  letter-spacing: -2px; /* Slightly tighten large headings if needed */
 }
 
 #center #left #story {
-    width: fit-content;
-    display: flex;
-    align-items: center;
-    gap: 20px;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
+
+#center #left #story h2 {
+  font-size: 6vw; /* Match other h2 */
+  line-height: .8;
+  letter-spacing: -2px; /* Slightly tighten large headings if needed */
+}
+
 
 #center #left #story p {
-    width: 50%;
+  width: 50%;
+  font-size: 16px;
+  line-height: 1.7; /* Ensure consistent increased line height */
+  letter-spacing: 1px; /* Ensure consistent increased letter spacing */
 }
 
-/* Responsive Media Queries for Navbar and Page 1 & 2 */
-@media (max-width: 1200px) {
-    #navbar { padding: 30px; }
-    #navbar h2 { font-size: 45px; }
-    #nav-pt2 a { font-size: 24px; }
+
+#center #right {
+  height: 100%;
+  width: 50%;
+  padding-right: 170px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
 }
 
-@media (max-width: 992px) {
-    #center { flex-direction: column; }
-    #center #left, #center #right {
-        width: 100%;
-        padding: 30px;
-        text-align: center;
-    }
+#center #right h2 {
+  font-size: 6vw;
+  line-height: .8;
+  letter-spacing: -2px; /* Slightly tighten large headings if needed */
 }
 
-@media (max-width: 768px) {
-    #navbar { height: 80px; padding: 25px 20px; }
-    #navbar h2 { font-size: 35px; }
-    #nav-pt2 a { font-size: 18px; gap: 20px; }
-    #page1 h1 { font-size: 40vw; padding-left: 20px; }
-}
-
-@media (max-width: 480px) {
-    #navbar { padding: 20px 15px; }
-    #navbar h2 { font-size: 28px; }
-    #nav-pt2 { gap: 15px; }
-    #nav-pt2 a { font-size: 16px; }
-    #page1 h1 { font-size: 30vw; padding-left: 15px; }
-}
-/* Page 3 Styling */
 #page3 {
-    min-height: 100vh;
-    width: 100%;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .p {
-    width: 75%;
-    height: 75vh;
-    position: absolute;
-    bottom: 0;
-    display: none;
+  width: 75%;
+  height: 75vh;
+  position: absolute;
+  display: flex;
+  flex-direction: column-reverse;
+  display: none;
+  bottom: 0;
 }
 
 .p img {
-    height: 95%;
-    width: 100%;
-    object-fit: cover;
-    position: absolute;
-    bottom: 0;
+  height: 95%;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  bottom: 0%;
 }
 
 .p .boxs {
-    background-color: #fff;
-    width: 100%;
-    height: 5%;
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  height: 5%;
 }
 
-#p1, #p2, #p3, #p4, #p5 {
-    display: initial;
-}
+#p1 { display: initial; top: 25%; }
+#p2 { top: 40%; z-index: 99; display: initial; }
+#p3 { top: 55%; display: initial; z-index: 99; }
+#p4 { top: 70%; display: initial; z-index: 99; }
+#p5 { top: 85%; z-index: 99999; display: initial; }
 
-#p1 { top: 25%; }
-#p2 { top: 40%; z-index: 99; }
-#p3 { top: 55%; z-index: 99; }
-#p4 { top: 70%; z-index: 99; }
-#p5 { top: 85%; z-index: 9999; }
-
-/* Page 4 Styling */
 #page4 {
-    position: relative;
-    height: 150vh;
-    width: 100%;
-    overflow: hidden;
+  position: relative;
+  height: 150vh;
+  width: 100%;
+  overflow: hidden;
 }
 
 .more {
-    height: 40vh;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
+  height: 40vh;
+  width: 100%;
+  display: flex;
+  align-items: end;
+  justify-content: center;
 }
 
 .more h1 {
-    text-transform: uppercase;
-    font-size: 70px;
-    transition: 0.5s ease;
-    font-weight: 700;
-    color: #fff;
+  font-size: 70px;
+  transition: all ease .5s;
+  font-weight: 700;
+  color: #fff;
+  text-transform: none; /* Allow italic from HTML */
+  letter-spacing: 1px; /* Added spacing */
 }
 
 .more i {
-    transition: 0.3s ease;
-    color: #fff;
-    margin-left: 10px;
+  transition: all ease 0.3s;
+  color: #fff;
+  margin-left: 10px;
+  font-size: 0.8em; /* Make arrow smaller */
+  vertical-align: middle;
 }
 
 .more h1:hover {
-    font-weight: 800;
+  font-weight: 800;
 }
 
 .more h1:hover i {
-    margin-left: 25px;
+  margin-left: 25px;
 }
 
-#page4 > h1 {
-    color: #fff;
-    font-size: 12vw;
-    text-align: center;
-    margin-top: 170px;
+#page4>h1 {
+  color: #fff;
+  font-size: 12vw;
+  line-height: .8;
+  text-align: center;
+  font-stretch: 400%;
+  font-weight: 700;
+  margin-top: 170px;
 }
 
-#page4 h5, #page4 h6 {
-    color: #fff;
-    font-size: 18px;
-    width: 50%;
-    text-align: center;
-    margin: 30px auto;
-    line-height: 1.5;
+#page4 h5 {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 300;
+  width: 35%; /* Adjusted width */
+  text-align: center;
+  margin: 30px auto;
+  line-height: 1.7; /* Increased line height */
+  letter-spacing: 1px; /* Increased letter spacing */
 }
+
+
+#page4 h6 {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400; /* Adjusted weight */
+  width: 40%; /* Adjusted width */
+  text-align: center;
+  margin: 0 auto;
+  display: flex; /* Use flex to align icon */
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* Space between text and icon */
+  line-height: 1.7; /* Increased line height */
+  letter-spacing: 1px; /* Increased letter spacing */
+}
+
+#page4 h6 i {
+  font-size: 1em; /* Match text size */
+  vertical-align: middle;
+  font-style: italic; /* Keep it italic */
+  letter-spacing: inherit; /* Inherit letter spacing */
+}
+
 
 #video-container2 {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 110vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  position: absolute;
+  bottom: 0%;
+  width: 100%;
+  height: 110vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #video-container2 video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transform: scale(0.6);
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transform: scale(.6);
 }
 
-/* Page 5 Styling */
-#page5 {
-    min-height: 150vh;
-    width: 100%;
-    background-color: #fff;
-    padding: 0 5%;
-}
+/* Removed #page5 styles */
 
-#text1 {
-    height: 70vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-}
-
-#text1 h1 {
-    font-size: 13vw;
-    font-weight: 800;
-    line-height: 0.8;
-}
-
-#insight {
-    display: flex;
-    align-items: flex-end;
-}
-
-#insight p {
-    font-size: 19px;
-    width: 50%;
-    margin-left: 30px;
-}
-
-#insight-ig {
-    height: 90vh;
-    display: flex;
-    gap: 30px;
-    margin-top: 80px;
-}
-
-#insight-ig .elem {
-    width: 50%;
-    height: 100%;
-}
-
-#insight-ig .elem img {
-    height: 90%;
-    object-fit: cover;
-}
-
-#insight-ig .elem p {
-    font-size: 18px;
-}
-
-#page5 .more {
-    justify-content: flex-start;
-}
-
-#page5 .more h1, #page5 .more i {
-    color: black;
-}
-
-/* Page 6 Styling */
 #page6 {
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: black; /* Ensure background is black */
 }
 
 #page6 h1 {
-    color: #fff;
-    font-size: 12vw;
-    line-height: 0.9;
+  color: #fff;
+  font-size: 12vw;
+  line-height: .9;
+  text-align: center;
+  font-stretch: 400%;
+  font-weight: 700;
 }
 
-#page6 h5, #page6 h6 {
-    color: #fff;
-    font-size: 18px;
-    width: 50%;
-    margin: 30px auto;
+#page6 h5 {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 300;
+  width: 35%; /* Adjusted width */
+  text-align: center;
+  margin: 30px auto;
+  line-height: 1.7; /* Increased line height */
+  letter-spacing: 1px; /* Increased letter spacing */
 }
 
-/* General Media Queries for Pages 3, 4, 5, 6 */
-@media (max-width: 992px) {
-    #page4 > h1, #page6 h1 {
-        font-size: 15vw;
-    }
+/* Removed #page6 h6 rule */
 
-    #page5, #text1, #insight-ig {
-        padding: 0 30px;
-    }
-
-    #insight p {
-        width: 100%;
-    }
-
-    #insight-ig {
-        flex-direction: column;
-        height: auto;
-    }
-
-    #insight-ig .elem {
-        width: 100%;
-    }
-}
-
-@media (max-width: 768px) {
-    .more h1 {
-        font-size: 50px;
-    }
-
-    #video-container2 video {
-        transform: scale(0.8);
-    }
-}
-
-@media (max-width: 480px) {
-    .more h1 {
-        font-size: 30px;
-    }
-
-    #page4 h5, #page4 h6, #page6 h5, #page6 h6 {
-        width: 80%;
-    }
-
-    #page5 {
-        padding: 0 20px;
-    }
-
-    #text1 h1 {
-        font-size: 15vw;
-    }
-
-    #insight-ig {
-        margin-top: 40px;
-    }
-}
-/* Footer Styling - Enhanced for Mobile Responsiveness */
-/* Specific fix to prevent footer overlapping on smaller screens */
-@media (max-width: 480px) {
-    #footer {
-        padding-bottom: 160px; /* Increased padding to give more bottom space */
-    }
-
-    #footer #ip {
-        position: static; /* changed from absolute to static */
-        margin-top: 20px; /* clear spacing */
-        transform: none; /* reset transform */
-    }
-
-    #footer #stay-informed {
-        margin-top: 20px;
-    }
-
-    #footer #copyright {
-        position: static;
-        margin-top: 20px;
-        transform: none;
-    }
-
-    #footer #left, 
-    #footer #right {
-        gap: 20px;
-        margin-bottom: 20px;
-    }
-}
 #footer {
-    width: 100%;
-    background-color: #111;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 60px 5%;
-    color: #fff;
-    position: relative;
-    padding-bottom: 120px;
+  min-height: 60vh; /* Adjusted height */
+  width: 100%;
+  background-color: #111; /* Dark background */
+  color: #fff; /* White text */
+  display: flex;
+  overflow: hidden;
+  padding: 60px 5%; /* Use padding like Ideapixel footer */
+  flex-wrap: wrap; /* Allow wrapping */
+  justify-content: space-between;
+  align-items: flex-start; /* Align items top */
+  position: relative; /* Needed for copyright */
+  padding-bottom: 80px; /* Space for copyright */
 }
 
-#footer::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 5%;
-    width: 90%;
-    height: 2px;
-    background: linear-gradient(90deg, #ff0099, #66ccff, #ffcc00);
-    animation: glowingLine 3s ease-in-out infinite;
-}
-
-@keyframes glowingLine {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.5; }
-}
-
-#footer #left, #footer #right {
-    max-width: 100%;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-}
-
-#footer #left h1 {
-    font-size: clamp(1.5rem, 6vw, 3rem);
-    letter-spacing: 2px;
-    transition: color 0.3s ease-in-out;
-}
-
-#footer #left h1:hover {
-    color: #ffcc00;
-    transform: scale(1.05);
+#footer #left {
+  width: 45%; /* Adjusted width */
+  padding: 0; /* Remove MOQO padding */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Keep space-between */
+  gap: 20px; /* Add gap */
+  min-height: 200px; /* Minimum height */
 }
 
 #footer #left p {
-    font-size: 16px;
-    color: #ccc;
-    line-height: 1.8;
-    width: 100%;
+  width: 100%; /* Adjusted width */
+  font-size: 16px; /* Adjusted font size */
+  color: #ccc;
+  line-height: 1.8; /* Further increase line height for footer */
+  letter-spacing: 1px; /* Ensure consistent increased letter spacing */
+}
+
+
+#footer #left #logo h1 { /* Style for IP logo */
+  font-size: 10vw;
+  font-stretch: normal; /* Reset stretch */
+  text-transform: uppercase;
+  line-height: 1;
+  font-weight: 900; /* Make bold */
+  display: inline-block; /* Allow placement */
+  color: #fff;
+  margin-top: 20px; /* Space above logo */
+}
+
+#footer #left h1 sup{ /* Remove sup style if not needed */
+ display: none;
+}
+
+#footer #right {
+  width: 45%; /* Adjusted width */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align content start */
+  align-items: flex-start; /* Align items start */
+  gap: 15px;
 }
 
 #footer #right .row {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column; /* Stack contact info */
 }
 
-#footer #right h4 {
-    color: #fff;
-    font-weight: 500;
-    font-size: 20px;
+#footer #right #contact-info { /* Styles for contact info block */
+  width: 100%;
 }
 
-#footer #right a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-    transition: color 0.3s ease;
-    margin-bottom: 5px;
+#footer #right #contact-info h4 {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 15px; /* Increase bottom margin */
+  color: #ccc;
+  line-height: 1.8; /* Further increase line height */
+  letter-spacing: 1px; /* Increase letter spacing */
+}
+#footer #right #contact-info h4 a {
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: inherit; /* Inherit spacing */
+}
+#footer #right #contact-info h4 a:hover {
+  color: #ffcc00;
 }
 
-#footer #right a:hover {
-    color: #ffcc00;
+#footer #right #copyright {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px;
+  color: #aaa;
+  text-align: center;
+  width: 90%;
+}
+#footer #right #copyright p {
+   line-height: 1.7; /* Increased line height */
+   letter-spacing: 1px; /* Increased letter spacing */
 }
 
-#footer #right .social-icons {
-    display: flex;
-    gap: 15px;
-    font-size: 30px;
-    justify-content: center;
-}
+/* --- Responsive Styles --- */
+@media (max-width:600px) {
 
-#footer #right .social-icons a {
-    color: #fff;
-    transition: transform 0.3s ease, color 0.3s ease;
-}
+  /* Inherit base p styling */
 
-#footer #right .social-icons a:hover {
-    transform: scale(1.2);
-    color: #ff0099;
-}
+  #navbar {
+      padding: 0 20px;
+      height: 60px; /* Set mobile navbar height */
+      padding-top: 10px; /* Adjust padding */
+      background-color: rgba(0, 0, 0, 0.7); /* Add background */
+      color: #fff; /* Ensure text is white */
+      mix-blend-mode: normal; /* Override blend mode */
+  }
 
-#footer #stay-informed {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    width: 100%;
-    margin-top: 20px;
-}
+  #navbar h2 {
+      font-size: 30px; /* Adjust size */
+  }
 
-#footer #stay-informed input[type="email"] {
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 5px;
-    border: none;
-    width: 100%;
-    max-width: 400px;
-}
+  #navbar h2 sup {
+      font-size: 5px;
+  }
 
-#footer #stay-informed button {
-    padding: 10px 20px;
-    background-color: #ffcc00;
-    color: #111;
-    border: none;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    width: 100%;
-    max-width: 400px;
-}
+  #nav-pt2 {
+      gap: 20px; /* Adjust gap */
+  }
 
-#footer #stay-informed button:hover {
-    background-color: #ff0099;
-}
+  #nav-pt2 a {
+      display: none; /* Hide default links */
+      font-size: 18px; /* Adjust size */
+  }
+  #nav-pt2 a:nth-child(3) { /* Show only Menu link */
+      display: block;
+      letter-spacing: 1px; /* Ensure spacing */
+  }
 
-#footer #copyright {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 14px;
-    color: #ccc;
-    text-align: center;
-    width: 90%;
-}
+  #page1 {
+      padding-top: 60px; /* Add padding matching navbar height */
+  }
 
-#footer #ip {
-    position: absolute;
-    bottom: 50px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: clamp(20px, 5vw, 30px);
-    font-weight: 900;
-    text-transform: uppercase;
-    color: #fff;
-    letter-spacing: 4px;
-    animation: ipGlow 2s ease-in-out infinite;
-}
+  #page1 h1 {
+      padding-left: 20px;
+      font-size: 30vw; /* Adjust size */
+  }
 
-@keyframes ipGlow {
-    0%, 100% { text-shadow: 0 0 20px #ffcc00; }
-    50% { text-shadow: 0 0 30px #ff0099; }
-}
+  #page2 {
+      height: auto; /* Adjust height */
+      padding: 50px 0; /* Add padding */
+  }
 
-/* Utility Classes */
-.flex-column-mobile {
-    flex-direction: column;
-}
+  #page2 #center {
+      flex-direction: column;
+      height: auto; /* Adjust height */
+      gap: 30px; /* Add gap */
+  }
 
-.hidden-mobile {
-    display: none;
-}
+  #center #left {
+      height: auto; /* Adjust height */
+      width: 100%;
+      padding-left: 20px;
+      padding-right: 20px; /* Add right padding */
+      text-align: center; /* Center text */
+      align-items: center; /* Center items */
+  }
 
-.text-center-mobile {
-    text-align: center;
-}
+  #center #left h2 {
+      font-size: 12vw;
+      letter-spacing: normal; /* Reset letter spacing */
+  }
 
-/* Enhanced Mobile Responsiveness */
-@media (max-width: 992px) {
-    #footer {
-        padding: 40px 5%;
-    }
-}
+  #center #left #story {
+      gap: 10px; /* Adjust gap */
+      flex-direction: column; /* Stack story */
+      align-items: center;
+  }
+   #center #left #story h2 {
+       font-size: 12vw; /* Match other h2 */
+       letter-spacing: normal; /* Reset letter spacing */
+   }
 
-@media (max-width: 768px) {
-    #footer {
-        padding: 30px 3%;
-    }
 
-    #footer #left h1 {
-        font-size: 2rem;
-    }
+  #center #left #story p {
+      width: 90%; /* Adjust width */
+      font-size: 14px; /* Adjust font size */
+      line-height: 1.7; /* Consistent increased line height */
+      letter-spacing: 1px; /* Consistent increased letter spacing */
+      text-align: center;
+  }
 
-    #footer #right h4, #footer #right a {
-        font-size: 16px;
-    }
+  #center #right {
+      height: auto; /* Adjust height */
+      width: 100%;
+      padding-left: 20px; /* Add left padding */
+      padding-right: 20px;
+      align-items: center; /* Center items */
+      text-align: center;
+  }
 
-    #footer #right .social-icons {
-        font-size: 24px;
-    }
-}
+  #center #right h2 {
+      font-size: 12vw;
+      letter-spacing: normal; /* Reset letter spacing */
+  }
 
-@media (max-width: 480px) {
-    #footer {
-        padding: 20px 2%;
-    }
+  #page3 {
+      min-height: 80vh; /* Adjust height */
+  }
+  .p {
+      width: 90%; /* Adjust width */
+      height: 60vh; /* Adjust height */
+  }
 
-    #footer #left h1 {
-        font-size: 1.5rem;
-    }
 
-    #footer #left p, #footer #right a {
-        font-size: 14px;
-    }
+  .more h1 {
+      font-size: 30px;
+  }
+  #page4{
+      height: auto; /* Adjust height */
+      padding-bottom: 50px; /* Add padding */
+  }
+
+  #page4>h1 {
+      font-size: 15vw; /* Adjust size */
+      line-height: .9;
+      font-stretch: normal; /* Reset stretch */
+      margin-top: 100px; /* Adjust margin */
+  }
+
+  #page4 h5 {
+      font-size: 16px; /* Adjust size */
+      width: 90%; /* Adjust width */
+      line-height: 1.7; /* Consistent increased line height */
+      letter-spacing: 1px; /* Consistent increased letter spacing */
+  }
+
+  #page4 h6 {
+      width: 90%; /* Wider width on mobile */
+      font-size: 16px;
+      line-height: 1.7; /* Consistent increased line height */
+      letter-spacing: 1px; /* Consistent increased letter spacing */
+      flex-wrap: wrap; /* Allow wrapping if needed */
+  }
+   #page4 h6 i {
+       /* letter-spacing: inherit; Inherited */
+   }
+
+
+  #video-container2 {
+    position: relative; /* Change position */
+    height: 50vh; /* Adjust height */
+    margin-top: 30px; /* Add margin */
+  }
+
+  #video-container2 video {
+      transform: scale(1); /* Reset scale */
+  }
+
+
+  /* Removed page5 rules */
+
+
+  #page6{
+      height: 80vh; /* Adjust height */
+  }
+  #page6 h1 {
+      font-size: 15vw;
+      font-stretch: normal; /* Reset stretch */
+      font-weight: 700;
+  }
+
+  #page6 h5 {
+      font-size: 16px; /* Adjust size */
+      width: 90%; /* Adjust width */
+      line-height: 1.7; /* Consistent increased line height */
+      letter-spacing: 1px; /* Consistent increased letter spacing */
+  }
+
+
+  #footer {
+      min-height: auto; /* Adjust height */
+      flex-direction: column;
+      padding: 40px 20px; /* Adjust padding */
+      gap: 40px; /* Add gap */
+      padding-bottom: 60px; /* Space for copyright */
+  }
+
+  #footer #left {
+      width: 100%;
+      min-height: auto; /* Adjust height */
+      justify-content: flex-start; /* Adjust alignment */
+  }
+
+  #footer #left p {
+      font-size: 14px; /* Adjust size */
+      line-height: 1.8; /* Consistent increased line height */
+      letter-spacing: 1px; /* Consistent increased letter spacing */
+      width: 100%;
+  }
+
+  #footer #left #logo h1 {
+      font-size: 18vw; /* Adjust size */
+      line-height: 1;
+  }
+
+  #footer #right {
+      width: 100%;
+      align-items: flex-start; /* Adjust alignment */
+  }
+
+  #footer #right #contact-info h4 {
+      font-size: 16px; /* Adjust size */
+      line-height: 1.8; /* Consistent increased line height */
+      letter-spacing: 1px; /* Consistent increased letter spacing */
+      margin-bottom: 12px; /* Adjust margin */
+  }
+
+  #footer #right #copyright {
+      font-size: 12px;
+      bottom: 10px;
+  }
+   #footer #right #copyright p {
+       line-height: 1.7; /* Consistent increased line height */
+       letter-spacing: 1px; /* Consistent increased letter spacing */
+  }
+
 }
