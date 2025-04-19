@@ -9,7 +9,9 @@
   box-sizing: border-box;
   font-family: Inter, sans-serif; /* Use HeadingNow consistently */
 }
-
+html {
+  scroll-behavior: smooth;
+}
 html,
 body {
   width: 100%;
@@ -106,14 +108,14 @@ p {
 }
 
 #page1 h1 {
-  font-size: 50vw;
+  font-size: 25vw;
   white-space: nowrap;
-  line-height: 1;
+  line-height: 2.3;
   text-transform: uppercase;
   color: #fff;
   font-stretch: 260%;
   font-weight: 900;
-  padding-left: 50px;
+  padding-left: 20px;
 }
 
 #page1 #video-container {
@@ -520,7 +522,7 @@ p {
 
   #page1 h1 {
       padding-left: 20px;
-      font-size: 35vw; /* Adjust size */
+      font-size: 40vw; /* Adjust size */
   }
 
   #page2 {
