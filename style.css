@@ -1,311 +1,48 @@
-@font-face {
-    font-family: Headingnow;
-    src: url(./Heading-Now-Variable.ttf); /* Ensure this path is correct */
-}
 /* ===( Build By : CODE AASHU )=== */
+
+/* Fonts Declaration */
+@font-face {
+    font-family: 'Headingnow';
+    src: url(./Heading-Now-Variable.ttf);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
+
+/* General Reset and Global Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Headingnow', sans-serif; /* Set font to Headingnow */
+    font-family: 'Montserrat', sans-serif;
 }
-html {
-    scroll-behavior: smooth; /* Enables smooth scroll behavior */
-    touch-action: manipulation;
 
+html {
+    scroll-behavior: smooth;
+    touch-action: manipulation;
 }
-video {
-    transform: translateZ(0);
-    backface-visibility: hidden;
-  }
-html,
+
 body {
     width: 100%;
     height: 100%;
+    overflow-x: hidden;
 }
-/* === Responsive Adjustments === */
-@media (max-width: 1200px) {
-    #navbar {
-      padding: 0 30px;
-      padding-top: 30px;
-    }
-  
-    #navbar h2 {
-      font-size: 45px;
-    }
-  
-    #nav-pt2 a {
-      font-size: 24px;
-    }
-  
-    #page5 {
-      padding: 0 100px;
-    }
-  }
-  
-  
-  @media (max-width: 992px) {
-    #center {
-      flex-direction: column;
-    }
-  
-    #center #left,
-    #center #right {
-      width: 100% !important;
-      padding: 0 30px !important;
-      text-align: center;
-    }
-  
-    #page2 #center {
-      height: 90%;
-    }
-  
-    #page4>h1,
-    #page6 h1 {
-      font-size: 15vw;
-    }
-  
-    #footer {
-      flex-direction: column;
-      gap: 40px;
-    }
-  
-    #footer #left,
-    #footer #right {
-      max-width: 100%;
-      text-align: center;
-    }
-  
-    #footer #stay-informed {
-      position: static;
-      justify-content: center;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    #navbar {
-      padding: 0 20px;
-      padding-top: 25px;
-      height: 80px;
-    }
-  
-    #navbar h2 {
-      font-size: 35px;
-    }
-  
-    #nav-pt2 {
-      gap: 30px;
-    }
-  
-    #nav-pt2 a {
-      font-size: 18px;
-    }
-  
-    #page1 h1 {
-      padding-left: 20px;
-      font-size: 40vw;
-    }
-  
-    #video-container video,
-    #video-container2 video {
-      transform: scale(1);
-    }
-  
-    #page5 {
-      padding: 0 40px;
-    }
-  
-    #text1 h1 {
-      font-size: 15vw;
-    }
-  
-    #insight-ig {
-      flex-direction: column;
-      height: auto;
-    }
-  
-    #insight-ig .elem {
-      width: 100%;
-    }
-  
-    .more h1 {
-      font-size: 40px;
-    }
-  
-    #footer {
-      padding: 40px 5%;
-    }
-  
-    #footer #ip {
-      font-size: 40px;
-      left: 20px;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    #navbar {
-      padding: 0 15px;
-      padding-top: 20px;
-    }
-  
-    #navbar h2 {
-      font-size: 28px;
-    }
-  
-    #nav-pt2 {
-      gap: 15px;
-    }
-  
-    #nav-pt2 a {
-      font-size: 16px;
-    }
-  
-    #page1 h1 {
-      padding-left: 15px;
-    }
-  
-    #page2 #left h2,
-    #page2 #right h2 {
-      font-size: 10vw;
-    }
-  
-    #page4 h5,
-    #page4 h6,
-    #page6 h5,
-    #page6 h6 {
-      width: 80%;
-    }
-  
-    #page5 {
-      padding: 0 20px;
-    }
-  
-    #text1 #insight p {
-      width: 100%;
-      margin-left: 0;
-    }
-  
-    .more h1 {
-      font-size: 30px;
-    }
-  
-    #footer #ip {
-      font-size: 30px;
-    }
-  
-    #footer::before {
-      left: 2%;
-      width: 96%;
-    }
-  }
-  
-  /* Mobile Landscape Optimization */
-  @media (max-height: 480px) and (orientation: landscape) {
-    #navbar {
-      padding-top: 15px;
-      height: 60px;
-    }
-  
-    #navbar h2 {
-      font-size: 28px;
-    }
-  
-    #page1 h1 {
-      font-size: 35vw;
-    }
-  
-    #video-container video {
-      transform: scale(0.8);
-    }
-  }
-  
-  /* Tablet Portrait Adjustments */
-  @media (min-width: 768px) and (orientation: portrait) {
-    #navbar h2 {
-      font-size: 40px;
-    }
-  
-    #page1 h1 {
-      font-size: 45vw;
-    }
-  
-    #page5 {
-      padding: 0 60px;
-    }
-  }
-  
-  /* 2K+ Screens Adjustments */
-  @media (min-width: 2000px) {
-    html {
-      font-size: 1.2vw;
-    }
-    
-    #navbar {
-      padding: 0 5vw;
-    }
-    
-    #page5 {
-      padding: 0 10vw;
-    }
-  }
-  
-  /* === General Responsive Improvements === */
-  img, video {
+
+img, video {
     max-width: 100%;
     height: auto;
-  }
-  
-  .flex-column-mobile {
-    flex-direction: column;
-  }
-  
-  .hidden-mobile {
-    display: none;
-  }
-  
-  .text-center-mobile {
-    text-align: center;
-  }
-  
-  /* Adjust fixed elements for mobile */
-  @media (max-width: 768px) {
-    #page3 .p {
-      width: 90%;
-      height: 60vh;
-    }
-    
-    #page4 {
-      height: auto;
-      padding-bottom: 50px;
-    }
-    
-    #video-container2 {
-      position: relative;
-      height: 50vh;
-    }
-  }
+    display: block;
+}
 
 *::selection {
     background-color: black;
     color: #fff;
 }
 
-#main {
-    width: 100%;
-    background-color: #fff;
-    overflow: hidden;
-}
-
-#page1 {
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    background-color: black;
-    overflow: hidden;
-}
-
+/* Navbar Styling */
 #navbar {
     position: fixed;
+    top: 0;
+    left: 0;
     height: 100px;
     width: 100%;
     padding: 0 50px;
@@ -334,14 +71,8 @@ body {
 }
 
 @keyframes stretch {
-    0% {
-        font-stretch: 700%;
-        font-weight: 300;
-    }
-    100% {
-        font-stretch: 800%;
-        font-weight: 100;
-    }
+    0% { font-stretch: 700%; font-weight: 300; }
+    100% { font-stretch: 800%; font-weight: 100; }
 }
 
 #navbar h2 sup {
@@ -350,18 +81,25 @@ body {
 
 #nav-pt2 {
     display: flex;
-    align-items: center;
-    justify-content: end;
     gap: 100px;
 }
 
 #nav-pt2 a {
-    text-decoration: none;
     color: #fff;
     text-transform: uppercase;
     font-size: 28px;
     font-weight: 300;
     font-stretch: 400%;
+    text-decoration: none;
+}
+
+/* Page 1 Styling */
+#page1 {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    overflow: hidden;
 }
 
 #page1 h1 {
@@ -375,13 +113,12 @@ body {
     padding-left: 50px;
 }
 
-#page1 #video-container {
+#video-container {
     position: absolute;
     top: 100%;
     left: 0;
     height: 100%;
     width: 100%;
-    z-index: 9;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -394,6 +131,7 @@ body {
     transform: scale(.6);
 }
 
+/* Page 2 Styling */
 #page2 {
     height: 110vh;
     width: 100%;
@@ -401,7 +139,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: gilroy;
 }
 
 #page2 #center {
@@ -411,17 +148,16 @@ body {
     align-items: center;
 }
 
-#center #left {
+#center #left, #center #right {
     height: 100%;
     width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 170px;
+    padding: 0 170px;
 }
 
-#center #left h2 {
-    font-family: gilroy;
+#center h2 {
     font-size: 6vw;
     line-height: .8;
 }
@@ -435,25 +171,39 @@ body {
 
 #center #left #story p {
     width: 50%;
-    font-family: gilroy;
 }
 
-#center #right {
-    height: 100%;
-    width: 50%;
-    padding-right: 170px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: center;
+/* Responsive Media Queries for Navbar and Page 1 & 2 */
+@media (max-width: 1200px) {
+    #navbar { padding: 30px; }
+    #navbar h2 { font-size: 45px; }
+    #nav-pt2 a { font-size: 24px; }
 }
 
-#center #right h2 {
-    font-family: gilroy;
-    font-size: 6vw;
-    line-height: .8;
+@media (max-width: 992px) {
+    #center { flex-direction: column; }
+    #center #left, #center #right {
+        width: 100%;
+        padding: 30px;
+        text-align: center;
+    }
 }
 
+@media (max-width: 768px) {
+    #navbar { height: 80px; padding: 25px 20px; }
+    #navbar h2 { font-size: 35px; }
+    #nav-pt2 a { font-size: 18px; gap: 20px; }
+    #page1 h1 { font-size: 40vw; padding-left: 20px; }
+}
+
+@media (max-width: 480px) {
+    #navbar { padding: 20px 15px; }
+    #navbar h2 { font-size: 28px; }
+    #nav-pt2 { gap: 15px; }
+    #nav-pt2 a { font-size: 16px; }
+    #page1 h1 { font-size: 30vw; padding-left: 15px; }
+}
+/* Page 3 Styling */
 #page3 {
     min-height: 100vh;
     width: 100%;
@@ -462,17 +212,14 @@ body {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    font-family: gilroy;
 }
 
 .p {
     width: 75%;
     height: 75vh;
     position: absolute;
-    display: flex;
-    flex-direction: column-reverse;
-    display: none;
     bottom: 0;
+    display: none;
 }
 
 .p img {
@@ -480,45 +227,26 @@ body {
     width: 100%;
     object-fit: cover;
     position: absolute;
-    bottom: 0%;
+    bottom: 0;
 }
 
 .p .boxs {
-    background-color: rgb(255, 255, 255);
+    background-color: #fff;
     width: 100%;
     height: 5%;
 }
 
-#p1 {
-    display: initial;
-    top: 25%;
-}
-
-#p2 {
-    top: 40%;
-    z-index: 99;
+#p1, #p2, #p3, #p4, #p5 {
     display: initial;
 }
 
-#p3 {
-    top: 55%;
-    display: initial;
-    z-index: 99;
-}
+#p1 { top: 25%; }
+#p2 { top: 40%; z-index: 99; }
+#p3 { top: 55%; z-index: 99; }
+#p4 { top: 70%; z-index: 99; }
+#p5 { top: 85%; z-index: 9999; }
 
-#p4 {
-    top: 70%;
-    display: initial;
-    z-index: 99;
-}
-
-#p5 {
-    top: 85%;
-    z-index: 9999;
-    display: initial;
-    z-index: 99999;
-}
-
+/* Page 4 Styling */
 #page4 {
     position: relative;
     height: 150vh;
@@ -528,23 +256,21 @@ body {
 
 .more {
     height: 40vh;
-    width: 100%;
     display: flex;
-    align-items: end;
+    align-items: flex-end;
     justify-content: center;
 }
 
 .more h1 {
-    font-family: gilroy;
     text-transform: uppercase;
     font-size: 70px;
-    transition: all ease .5s;
+    transition: 0.5s ease;
     font-weight: 700;
     color: #fff;
 }
 
 .more i {
-    transition: all ease 0.3s;
+    transition: 0.3s ease;
     color: #fff;
     margin-left: 10px;
 }
@@ -557,40 +283,25 @@ body {
     margin-left: 25px;
 }
 
-#page4>h1 {
+#page4 > h1 {
     color: #fff;
     font-size: 12vw;
-    line-height: .8;
     text-align: center;
-    font-stretch: 400%;
-    font-weight: 700;
     margin-top: 170px;
 }
 
-#page4 h5 {
+#page4 h5, #page4 h6 {
     color: #fff;
-    font-family: gilroy;
     font-size: 18px;
-    font-weight: 300;
-    width: 25%;
+    width: 50%;
     text-align: center;
     margin: 30px auto;
-    line-height: 1.2;
-}
-
-#page4 h6 {
-    color: #fff;
-    font-family: gilroy;
-    font-size: 18px;
-    font-weight: 700;
-    width: 25%;
-    text-align: center;
-    margin: 0 auto;
+    line-height: 1.5;
 }
 
 #video-container2 {
     position: absolute;
-    bottom: 0%;
+    bottom: 0;
     width: 100%;
     height: 110vh;
     display: flex;
@@ -599,68 +310,62 @@ body {
 }
 
 #video-container2 video {
-    height: 100%;
     width: 100%;
+    height: 100%;
     object-fit: cover;
-    transform: scale(.6);
+    transform: scale(0.6);
 }
 
+/* Page 5 Styling */
 #page5 {
     min-height: 150vh;
     width: 100%;
     background-color: #fff;
-    padding: 0 180px;
+    padding: 0 5%;
 }
 
 #text1 {
-    width: 100%;
     height: 70vh;
     display: flex;
     flex-direction: column;
-    justify-content: end;
+    justify-content: flex-end;
 }
 
 #text1 h1 {
     font-size: 13vw;
-    font-stretch: 350%;
     font-weight: 800;
-    line-height: .8;
+    line-height: 0.8;
 }
 
-#text1 #insight {
+#insight {
     display: flex;
-    align-items: end;
+    align-items: flex-end;
 }
 
 #insight p {
     font-size: 19px;
-    font-family: gilroy;
-    width: 25%;
+    width: 50%;
     margin-left: 30px;
 }
 
 #insight-ig {
-    width: 100%;
     height: 90vh;
     display: flex;
-    justify-content: flex-start;
     gap: 30px;
     margin-top: 80px;
 }
 
 #insight-ig .elem {
-    width: 40%;
+    width: 50%;
     height: 100%;
 }
 
 #insight-ig .elem img {
-    width: 100%;
     height: 90%;
     object-fit: cover;
 }
 
 #insight-ig .elem p {
-    font-family: gilroy;
     font-size: 18px;
 }
 
@@ -668,93 +373,100 @@ body {
     justify-content: flex-start;
 }
 
-#page5 .more h1 {
+#page5 .more h1, #page5 .more i {
     color: black;
 }
 
-#page5 .more i {
-    color: black;
-}
-
+/* Page 6 Styling */
 #page6 {
     height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: center;
 }
 
 #page6 h1 {
     color: #fff;
     font-size: 12vw;
-    line-height: .9;
-    text-align: center;
-    font-stretch: 400%;
-    font-weight: 700;
+    line-height: 0.9;
 }
 
-#page6 h5 {
+#page6 h5, #page6 h6 {
     color: #fff;
-    font-family: gilroy;
     font-size: 18px;
-    font-weight: 300;
-    width: 25%;
-    text-align: center;
+    width: 50%;
     margin: 30px auto;
-    line-height: 1.2;
 }
 
-#page6 h6 {
-    color: #fff;
-    font-family: gilroy;
-    font-size: 18px;
-    font-weight: 700;
-    width: 25%;
-    text-align: center;
-    margin: 0 auto;
+/* General Media Queries for Pages 3, 4, 5, 6 */
+@media (max-width: 992px) {
+    #page4 > h1, #page6 h1 {
+        font-size: 15vw;
+    }
+
+    #page5, #text1, #insight-ig {
+        padding: 0 30px;
+    }
+
+    #insight p {
+        width: 100%;
+    }
+
+    #insight-ig {
+        flex-direction: column;
+        height: auto;
+    }
+
+    #insight-ig .elem {
+        width: 100%;
+    }
 }
 
-@font-face {
-    font-family: Montserrat;
-    src: url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap'); /* Added Montserrat font from Google Fonts */
-}
-/* ===( Build By : CODE AASHU )=== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif; /* Set font to Montserrat */
+@media (max-width: 768px) {
+    .more h1 {
+        font-size: 50px;
+    }
+
+    #video-container2 video {
+        transform: scale(0.8);
+    }
 }
 
-html,
-body {
-    width: 100%;
-    height: 100%;
-}
+@media (max-width: 480px) {
+    .more h1 {
+        font-size: 30px;
+    }
 
-*::selection {
-    background-color: black;
-    color: #fff;
-}
+    #page4 h5, #page4 h6, #page6 h5, #page6 h6 {
+        width: 80%;
+    }
 
-#main {
-    width: 100%;
-    background-color: #fff;
-    overflow: hidden;
-}
+    #page5 {
+        padding: 0 20px;
+    }
 
+    #text1 h1 {
+        font-size: 15vw;
+    }
+
+    #insight-ig {
+        margin-top: 40px;
+    }
+}
+/* Footer Styling */
 #footer {
     width: 100%;
-    background-color: #111; /* Black background */
+    background-color: #111;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     padding: 60px 5%;
     color: #fff;
     position: relative;
-    z-index: 100;
-    flex-wrap: wrap;
-    padding-bottom: 100px; /* Additional space for the copyright section */
+    padding-bottom: 100px;
 }
 
 #footer::before {
@@ -768,27 +480,27 @@ body {
     animation: glowingLine 3s ease-in-out infinite;
 }
 
+@keyframes glowingLine {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
 #footer #left {
-    flex: 1;
     max-width: 30%;
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    justify-content: center;
 }
 
 #footer #left h1 {
-    font-size: 6vw;
-    color: #fff;
-    text-transform: uppercase;
+    font-size: clamp(2rem, 6vw, 4rem);
     letter-spacing: 2px;
-    text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.5);
     transition: color 0.3s ease-in-out;
 }
 
 #footer #left h1:hover {
-    color: #ffcc00; /* Glowing effect on hover */
-    transform: scale(1.1);
+    color: #ffcc00;
+    transform: scale(1.05);
 }
 
 #footer #left p {
@@ -798,12 +510,10 @@ body {
 }
 
 #footer #right {
-    flex: 1;
     max-width: 50%;
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    justify-content: space-between;
 }
 
 #footer #right .row {
@@ -821,12 +531,11 @@ body {
     color: #fff;
     text-decoration: none;
     font-size: 18px;
-    padding-bottom: 5px;
-    transition: all 0.3s ease;
+    transition: color 0.3s ease;
 }
 
 #footer #right a:hover {
-    color: #997b04;
+    color: #ffcc00;
 }
 
 #footer #right .social-icons {
@@ -842,19 +551,15 @@ body {
 
 #footer #right .social-icons a:hover {
     transform: scale(1.2);
-    color: #ffcc00;
+    color: #ff0099;
 }
 
-/* Stay Informed Section: Align it with the right end of the line */
 #footer #stay-informed {
-    flex: 1;
     display: flex;
-    justify-content: flex-start;
-    align-items: right;
-    font-size: 16px;
+    justify-content: center;
     gap: 20px;
-    position: relative; /* Position it absolutely to align with the right end of the line */
-    right: 40%; /* Align it with the right end of the footer line */
+    width: 100%;
+    margin-top: 20px;
 }
 
 #footer #stay-informed input[type="email"] {
@@ -862,6 +567,8 @@ body {
     font-size: 16px;
     border-radius: 5px;
     border: none;
+    width: 60%;
+    max-width: 400px;
 }
 
 #footer #stay-informed button {
@@ -871,13 +578,13 @@ body {
     border: none;
     font-size: 16px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 #footer #stay-informed button:hover {
     background-color: #ff0099;
 }
 
-/* Copyright Section below the footer */
 #footer #copyright {
     position: absolute;
     bottom: 10px;
@@ -888,15 +595,140 @@ body {
     text-align: center;
 }
 
-/* IP Section with glow and animation */
 #footer #ip {
     position: absolute;
     bottom: 10px;
-    left: 30px;
-    font-size: 60px;
+    left: 20px;
+    font-size: clamp(25px, 5vw, 50px);
     font-weight: 900;
     text-transform: uppercase;
     color: #fff;
     letter-spacing: 4px;
     animation: ipGlow 2s ease-in-out infinite;
+}
+
+@keyframes ipGlow {
+    0%, 100% { text-shadow: 0 0 20px #ffcc00; }
+    50% { text-shadow: 0 0 30px #ff0099; }
+}
+
+/* Footer Media Queries */
+@media (max-width: 992px) {
+    #footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 5%;
+    }
+
+    #footer #left, #footer #right {
+        max-width: 100%;
+    }
+
+    #footer #stay-informed input[type="email"], 
+    #footer #stay-informed button {
+        width: 80%;
+    }
+
+    #footer #ip {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 768px) {
+    #footer {
+        padding: 30px 3%;
+    }
+
+    #footer #left h1 {
+        font-size: 2rem;
+    }
+
+    #footer #right h4, 
+    #footer #right a {
+        font-size: 16px;
+    }
+
+    #footer #right .social-icons {
+        font-size: 24px;
+    }
+
+    #footer #ip {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    #footer {
+        padding: 20px 2%;
+    }
+
+    #footer #left h1 {
+        font-size: 1.5rem;
+    }
+
+    #footer #left p {
+        font-size: 14px;
+    }
+
+    #footer #right h4, 
+    #footer #right a {
+        font-size: 14px;
+    }
+
+    #footer #stay-informed input[type=\"email\"], 
+    #footer #stay-informed button {
+        width: 100%;
+    }
+
+    #footer #ip {
+        font-size: 20px;
+    }
+}
+
+/* Utility Classes */
+.flex-column-mobile {
+    flex-direction: column;
+}
+
+.hidden-mobile {
+    display: none;
+}
+
+.text-center-mobile {
+    text-align: center;
+}
+
+/* Final Responsive Checks */
+@media (max-width: 480px) {
+    html, body {
+        font-size: 14px;
+    }
+
+    #page1, #page2, #page3, #page4, #page5, #page6 {
+        padding: 10px;
+    }
+
+    #navbar h2 {
+        font-size: 20px;
+    }
+
+    #nav-pt2 {
+        gap: 10px;
+    }
+
+    #nav-pt2 a {
+        font-size: 14px;
+    }
+
+    #footer #stay-informed {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #footer #stay-informed input[type=\"email\"],
+    #footer #stay-informed button {
+        width: 100%;
+        margin: 5px 0;
+    }
 }
